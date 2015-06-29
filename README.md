@@ -9,7 +9,7 @@ Please pay attention to the following:
 
 - BONUS: add the option to add a discount coupon to your cart
 - BONUS TIP: You are applying for a job as a PHP Backend Developper (Think about security, testability and separation of concerns)
-- 
+
 An extra comment out of me as a recruiter: I Know that our Team Lead wants good documentation of your code, and also make sure to work via the OOP principle.
 
 Good Luck
