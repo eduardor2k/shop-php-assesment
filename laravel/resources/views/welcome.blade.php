@@ -8,7 +8,7 @@
 			<ul class="grid_2">
 			@foreach($items as $item)
                 <li>
-                    <a href="details.html"><img src="images/8.jpg" class="img-responsive" alt=""></a>
+                    <a href="details.html"><img src="/images/products/{{$item->product->pictures[0]->path}}" class="img-responsive" alt=""></a>
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>{{$item->product->name}}</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY {{$item->price}}&euro;</h6></span></div>
@@ -16,39 +16,6 @@
                     </div>
                 </li>
 			@endforeach
-
-		<li>
-				<a href="details.html"><img src="images/8.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Lorem ipsum dolor</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY $40.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-				</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="images/9.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Consectetur adipis</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY $60.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-			</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="images/10.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Commodo consequat</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY $14.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-			</div>
-		</li>
-		<li>
-				<a href="details.html"><img src="images/11.jpg" class="img-responsive" alt=""></a>
-				<div class="special-info grid_1 simpleCart_shelfItem">
-					<h5>Voluptate velit</h5>
-					<div class="item_add"><span class="item_price"><h6>ONLY $37.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-				</div>
-		</li>
 		<div class="clearfix"> </div>
 	</ul>
 		</div>

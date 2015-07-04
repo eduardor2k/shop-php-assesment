@@ -24,10 +24,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <!-- start menu -->
 <link href="/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="/js/menu_jquery.js"></script>
-<script src="/js/simpleCart.min.js"> </script>
 </head>
 <body>
 <!-- header_top -->
@@ -92,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"> </div>
                 </div>
                 <div class="create_btn">
-                    <a href="checkout.html">CHECKOUT</a>
+                    <a href="checkout">CHECKOUT</a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -110,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="megamenu skyblue">
                     <li class="active grid"><a class="color1" href="/">Home</a></li>
                     @foreach ($categories as $category)
-                    <li><a class="color2" href="#">{{ $category->name }}</a></li>
+                    <li><a class="color2" href="/{{ $category->code }}">{{ $category->name }}</a></li>
                     @endforeach
              </ul>
         </div>

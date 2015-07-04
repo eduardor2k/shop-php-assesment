@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         {
             return;
         }
-        view()->share('categories', Category::all());
+        view()->share('categories', Category::all()->take(8));
     }
 
     /**

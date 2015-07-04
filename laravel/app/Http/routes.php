@@ -12,11 +12,16 @@ use App\Models\Inventory;
 */
 
 Route::get('/', function () {
-    $items = Inventory::all();
+    $items = Inventory::all()->take(4);
     return view('welcome',['items' => $items]);
 });
 
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
 Route::group(['prefix' => 'backoffice'],function(){
+
     Route::get('/', function ()    {
         return view('backoffice.index');
     });
@@ -27,4 +32,5 @@ Route::group(['prefix' => 'backoffice'],function(){
 
 });
 
-//Route::get('/backoffice/')
+Route::resource('/{category}', 'CategoryController@index');
+Route::resource('/{category}/{product}', 'CategoryController@index');

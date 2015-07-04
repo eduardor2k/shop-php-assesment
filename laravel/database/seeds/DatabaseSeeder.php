@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategoryProductTableSeeder::class);
         $this->call(CategoryProductTableSeeder::class);
         $this->call(InventoryTableSeeder::class);
+        $this->call(ProductPicturesTableSeeder::class);
 
         Model::reguard();
     }
@@ -28,3 +29,4 @@ include 'ProductTableSeeder.php';
 include 'CategoriesTableSeeder.php';
 include 'CategoryProductTableSeeder.php';
 include 'InventoryTableSeeder.php';
+include 'ProductPicturesTableSeeder.php';

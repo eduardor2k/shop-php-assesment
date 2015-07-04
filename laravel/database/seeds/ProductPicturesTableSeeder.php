@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class InventoryTableSeeder extends Seeder
+class ProductPicturesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,75 +11,59 @@ class InventoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('inventory')->delete();
+        DB::table('products_pictures')->delete();
 
         $products = [
             [
                 'product_id' => 1,
-                'price' => 50,
-                'tax' => 21,
-                'quantity' => 12,
+                'path' => '1.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 2,
-                'price' => 89,
-                'tax' => 21,
-                'quantity' => 40,
+                'path' => '2.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 3,
-                'price' => 99,
-                'tax' => 21,
-                'quantity' => 35,
+                'path' => '3.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 4,
-                'price' => 79,
-                'tax' => 21,
-                'quantity' => 12,
+                'path' => '4.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 5,
-                'price' => 45,
-                'tax' => 21,
-                'quantity' => 15,
+                'path' => '5.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 6,
-                'price' => 69,
-                'tax' => 21,
-                'quantity' => 250,
+                'path' => '8.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 7,
-                'price' => 39.99,
-                'tax' => 21,
-                'quantity' => 100,
+                'path' => '11.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
             [
                 'product_id' => 8,
-                'price' => 100,
-                'tax' => 21,
-                'quantity' => 30,
+                'path' => '11.jpg',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
             ],
         ];
 
-        DB::table('inventory')->insert($products);
+        DB::table('products_pictures')->insert($products);
     }
 }

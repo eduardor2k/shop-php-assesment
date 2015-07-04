@@ -16,6 +16,7 @@ class CategoriesTableSeeder extends Seeder
         $categories = [
             [
                 'id' => 1,
+                'code' => 'new_arrivals',
                 'name' => 'New Arrivals',
                 'position' => 1,
                 'parent' => 0,
@@ -25,6 +26,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 2,
+                'code' => 'tuxedo',
                 'name' => 'Tuxedo',
                 'position' => 2,
                 'parent' => 0,
@@ -34,6 +36,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 3,
+                'code' => 'sweater',
                 'name' => 'Sweater',
                 'position' => 2,
                 'parent' => 0,
@@ -43,6 +46,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 4,
+                'code' => 'shoes',
                 'name' => 'Shoes',
                 'position' => 2,
                 'parent' => 0,
@@ -52,6 +56,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 5,
+                'code' => 'glasses',
                 'name' => 'Glasses',
                 'position' => 2,
                 'parent' => 0,
@@ -61,6 +66,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 6,
+                'code' => 't_shirt',
                 'name' => 'T-Shirt',
                 'position' => 2,
                 'parent' => 0,
@@ -70,6 +76,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 7,
+                'code' => 'watches',
                 'name' => 'Watches',
                 'position' => 2,
                 'parent' => 0,
