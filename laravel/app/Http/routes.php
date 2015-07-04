@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Inventory;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $items = Inventory::all();
+    return view('welcome',['items' => $items]);
 });
 
 Route::group(['prefix' => 'backoffice'],function(){
@@ -22,6 +23,7 @@ Route::group(['prefix' => 'backoffice'],function(){
 
     Route::resource('products', 'BackOffice\ProductController');
     Route::resource('categories', 'BackOffice\CategoryController');
+    Route::resource('inventory', 'BackOffice\InventoryController');
 
 });
 

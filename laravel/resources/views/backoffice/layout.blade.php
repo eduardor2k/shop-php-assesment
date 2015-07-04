@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="#" class="navbar-brand">MyShop</a>
+              <a href="/" class="navbar-brand">MyShop</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
               <ul class="nav navbar-nav">

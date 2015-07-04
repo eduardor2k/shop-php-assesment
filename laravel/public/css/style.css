@@ -1267,7 +1267,7 @@ ul.grid_2 li h5:hover {
 ul.grid_2 li {
   width: 23%;
   float: left;
-  margin:0 1%
+  margin: 0 1% 1% 1%
 }
 .arriv-info2 a {
   text-decoration: none;

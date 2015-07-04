@@ -9,6 +9,7 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Categories</th>
                 <th>Visible</th>
             </tr>
         </thead>
@@ -18,6 +19,11 @@
                 <th scope="row">{{$products->id}}</th>
                 <td>{{$products->name}}</td>
                 <td>{{$products->description}}</td>
+                <td>
+                @foreach ($products->categories as $category)
+                    {{$category->name}}
+                @endforeach
+                </td>
                 <td>Yes</td>
             </tr>
         @endforeach

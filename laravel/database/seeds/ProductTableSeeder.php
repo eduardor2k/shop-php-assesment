@@ -15,7 +15,8 @@ class ProductTableSeeder extends Seeder
 
         $products = [
             [
-                'name' => 'OnePlus One',
+                'id' => 1,
+                'name' => 'Faux leather jacket with hood',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
