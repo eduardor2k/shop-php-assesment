@@ -17,6 +17,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => 'Grey Suit',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -24,6 +26,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 2,
                 'name' => 'Faux leather jacket with hood',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -31,6 +35,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 3,
                 'name' => 'Light Trench Coat',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -38,6 +44,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 4,
                 'name' => 'Combined denim zip jacket',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -45,6 +53,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 5,
                 'name' => 'Long denim parka',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -52,6 +62,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 6,
                 'name' => 'White line faux leather jacket',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -59,6 +71,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 7,
                 'name' => 'Blue overshirt',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime
@@ -66,6 +80,8 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 8,
                 'name' => 'Mixed fabric jacket',
+                'price' => rand(0,100),
+                'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime

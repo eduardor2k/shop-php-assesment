@@ -22,15 +22,16 @@ Route::get('/checkout', function () {
 
 Route::group(['prefix' => 'backoffice'],function(){
 
-    Route::get('/', function ()    {
+    Route::get('/', ['as' => 'backoffice', function ()    {
         return view('backoffice.index');
-    });
+    }]);
 
-    Route::resource('products', 'BackOffice\ProductController');
-    Route::resource('categories', 'BackOffice\CategoryController');
-    Route::resource('inventory', 'BackOffice\InventoryController');
+    Route::get('products', ['uses' => 'BackOffice\ProductController@index', 'as' => 'backoffice.products']);
+    Route::get('categories', ['uses' => 'BackOffice\CategoryController@index', 'as' => 'backoffice.categories']);
+    Route::get('inventory', ['uses' => 'BackOffice\InventoryController@index', 'as' => 'backoffice.inventory']);
 
 });
 
-Route::resource('/{category}', 'CategoryController@index');
-Route::resource('/{category}/{product}', 'CategoryController@index');
+Route::get('/{category}/{product}_p{product_id}.html', ['uses' => 'ProductController@index', 'as' => 'product']);
+Route::get('/{category}',['uses' => 'CategoryController@index', 'as' => 'category']);
+

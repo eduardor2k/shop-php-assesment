@@ -8,11 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Gretong a Ecommerce Category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
-<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="megamenu skyblue">
                     <li class="active grid"><a class="color1" href="/">Home</a></li>
                     @foreach ($categories as $category)
-                    <li><a class="color2" href="/{{ $category->code }}">{{ $category->name }}</a></li>
+                    <li><a class="color2" href="{{ route('category', ['category' => $category->code]) }}">{{ $category->name }}</a></li>
                     @endforeach
              </ul>
         </div>

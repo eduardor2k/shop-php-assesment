@@ -16,28 +16,37 @@ use App\Models\Product;
  *
  * @package App\Http\Controllers
  */
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index($category)
+    public function index($category,$product,$product_id)
     {
         // We retrieve the category
-        $item = Category::getByCode($category);
+        $category = Category::getByCode($category);
 
         // If the category does not exist we throw a 404 message
-        if(!$item)
+        if(!$category)
+        {
+            abort(404);
+        }
+
+        // We retrieve the category
+        $product = Product::find($product_id);
+
+        // If the category does not exist we throw a 404 message
+        if(!$product)
         {
             abort(404);
         }
 
         // We send everything to the view
-        return view('category',[
-            'category' => $item,
-            'products' => $item->products
+        return view('product',[
+            'category' => $category,
+            'product' => $product
         ]);
     }
 

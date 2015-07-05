@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    public function products()
+    {
+        return $this->belongsToMany('App\Models\Product');
+    }
+
     /**
      * This method returns the category given the code identifier
      *
@@ -14,6 +19,6 @@ class Category extends Model
      */
     protected function getByCode($code)
     {
-        return self::where('code',$code)->get();
+        return self::where('code',$code)->first();
     }
 }
