@@ -20,8 +20,18 @@ Route::group(['prefix' => 'cart'],function() {
 
     Route::get('/', ['uses' => 'CartController@index', 'as' => 'cart.index']);
     Route::get('add/{product_id}', ['uses' => 'CartController@add', 'as' => 'cart.add']);
+    Route::get('update/{product_id}/{quantity}', ['uses' => 'CartController@update', 'as' => 'cart.update']);
     Route::get('remove/{product_id}', ['uses' => 'CartController@remove', 'as' => 'cart.remove']);
     Route::get('clear', ['uses' => 'CartController@clear', 'as' => 'cart.clear']);
+
+});
+
+Route::group(['prefix' => 'coupon'],function() {
+
+    Route::get('/', ['uses' => 'CouponController@index', 'as' => 'coupon.index']);
+    Route::get('add/{product_id}', ['uses' => 'CouponController@add', 'as' => 'coupon.add']);
+    Route::get('remove/{product_id}', ['uses' => 'CouponController@remove', 'as' => 'coupon.remove']);
+    Route::get('clear', ['uses' => 'CouponController@clear', 'as' => 'coupon.clear']);
 
 });
 

@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Requests;
 use App\Models\Product;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 /**
- * Class CategoryController
+ * Class CartController
  *
- * This controllers displays all the products for a given category
+ * This controler manages all the cart operations
  *
  * @package App\Http\Controllers
  */
@@ -30,7 +30,7 @@ class CartController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Adds an item to the cart
      *
      * @return Response
      */
@@ -41,24 +41,45 @@ class CartController extends Controller
         {
             abort(404);
         }
-
         Cart::associate('Product','App\Models')->add($product_id, $product->name, 1, $product->price);
+        return redirect()->route('cart.index');
+    }
+
+    /**
+     * Removes an item from the cart
+     *
+     * @param   string      $rowid      Item identifier in the cart
+     * @return Response
+     */
+    public function remove($rowid)
+    {
+        Cart::remove($rowid);
         return redirect()->route('cart.index');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @return Response
+     * @param   string      $rowid      Item identifier in the cart
+     * @param   integer     $quantity   New quantity of the item|Array of attributes to update
+     * @return  Response
      */
-    public function remove($product_id)
+    public function update($rowid,$quantity)
     {
-        Cart::remove($product_id);
+        $quantity = intval($quantity);
+        try
+        {
+            Cart::update($rowid,$quantity);
+        }
+        catch(\Exception $e)
+        {
+            // If the items does not exist, we do nothing
+        }
         return redirect()->route('cart.index');
     }
 
     /**
-     * Display the specified resource.
+     * Remove all items from the cart
      *
      * @return Response
      */

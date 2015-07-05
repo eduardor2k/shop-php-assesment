@@ -1,11 +1,19 @@
 @extends('layout')
 
 @section('content')
+<script type="text/javascript">
+    $(function() {
+        $('.updateQuantity').change(function(){
+            var rowid = $(this).attr('rowid');
+            var items = $('option:selected',this).val();
+            window.location = '/cart/update/'+rowid+'/'+items;
+        });
+    });
+</script>
 
 <div class="container">
 	<div class="check">
 		<div class="col-md-3 cart-total">
-			 <a class="continue" href="#">Continue to basket</a>
 			 <div class="price-details">
 				 <h3>Price Details</h3>
 				 <span>Total</span>
@@ -38,10 +46,15 @@
                          <img src="/images/products/{{$product->product->pictures[0]->path}}" class="img-responsive" alt=""/>
                     </div>
 			        <div class="cart-item-info">
-					    <h3><a href="{{ route('product', ['category' => 'new_arrivals', 'product' => str_slug($product->product->name) ]) }}">{{$product->id}}# {{$product->name}}</a></h3>
+					    <h3><a href="{{ route('product', ['category' => $product->product->categories[0]->code, 'product' => str_slug($product->product->name) ]) }}">{{$product->id}}# {{$product->name}}</a></h3>
 						<p>{{ $product->product->short_description }}</p>
 						<ul class="qty">
-							<li><p>Qty : {{$product->qty}}</p></li>
+							<li><p>Quantity :
+							    <select class="updateQuantity" rowid="{{ $product->rowid }}">
+							        @for($i = 0; $i < 20; $i++)
+                                        <option value="{{$i}}" @if($product->qty == $i)selected="selected"@endif>{{$i}}</option>
+							        @endfor
+							    </select></p></li>
 						</ul>
 					    <div class="clearfix"></div>
 					</div>
