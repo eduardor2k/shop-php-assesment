@@ -22,11 +22,11 @@
                     <p>{{ $product->short_description }}</p>
                     <div class="price">
                         <span class="text">Price:</span>
-                        <span class="price-new">{{ $product->short_description }}&euro;</span>
+                        <span class="price-new">{{ $product->price }}&euro;</span>
                     </div>
 
                     <div class="btn_form">
-                        <a href="checkout.html">Add to Cart</a>
+                        <a href="{{ route('cart.add', [ 'product_id' => $product->id ] ) }}">Add to Cart</a>
                     </div>
 
                  </div>

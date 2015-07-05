@@ -12,7 +12,7 @@
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>{{$item->product->name}}</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY {{$item->product->price}}&euro;</h6></span></div>
-                        <div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
+                        <div class="item_add"><span class="item_price"><a href="{{ route('cart.add', [ 'product_id' => $item->product->id ] ) }}">add to cart</a></span></div>
                     </div>
                 </li>
 			@endforeach

@@ -50,12 +50,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header">
         <div class="head-t">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""/> </a>
+                <a href="{{ route('home') }}"><img src="images/logo.png" class="img-responsive" alt=""/> </a>
             </div>
             <!-- start header_right -->
             <div class="header_right">
                 <div class="rgt-bottom">
-                    <div class="log">
+                    <!--<div class="log">
                         <div class="login" >
                             <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
                                 <div id="loginBox">
@@ -80,15 +80,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="reg">
                         <a href="register.html">REGISTER</a>
-                    </div>
+                    </div>-->
                 <div class="cart box_1">
-                    <a href="checkout.html">
-                        <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="images/bag.png" alt=""></h3>
+                    <a href="{{ route('cart.index') }}">
+                        <h3> <span class="simpleCart_total">{{ Cart::total() }}&euro;</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">{{ count(Cart::content()) }}</span> items)<img src="images/bag.png" alt=""></h3>
                     </a>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="create_btn">
-                    <a href="checkout">CHECKOUT</a>
+                    <a href="{{ route('cart.index') }}">CHECKOUT</a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
             <!-- start header menu -->
             <ul class="megamenu skyblue">
-                    <li class="active grid"><a class="color1" href="/">Home</a></li>
+                    <li class="active grid"><a class="color1" href="{{ route('home') }}">Home</a></li>
                     @foreach ($categories as $category)
                     <li><a class="color2" href="{{ route('category', ['category' => $category->code]) }}">{{ $category->name }}</a></li>
                     @endforeach

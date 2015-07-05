@@ -11,13 +11,18 @@ use App\Models\Inventory;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home',function () {
     $items = Inventory::all()->take(4);
     return view('welcome',['items' => $items]);
-});
+}]);
 
-Route::get('/checkout', function () {
-    return view('checkout');
+Route::group(['prefix' => 'cart'],function() {
+
+    Route::get('/', ['uses' => 'CartController@index', 'as' => 'cart.index']);
+    Route::get('add/{product_id}', ['uses' => 'CartController@add', 'as' => 'cart.add']);
+    Route::get('remove/{product_id}', ['uses' => 'CartController@remove', 'as' => 'cart.remove']);
+    Route::get('clear', ['uses' => 'CartController@clear', 'as' => 'cart.clear']);
+
 });
 
 Route::group(['prefix' => 'backoffice'],function(){
