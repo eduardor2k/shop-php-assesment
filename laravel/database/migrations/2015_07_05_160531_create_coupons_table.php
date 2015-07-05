@@ -12,7 +12,15 @@ class CreateCouponsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('coupons', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('code');
+            $table->float('discount');
+            $table->dateTime('enable');
+            $table->dateTime('expire');
+            $table->boolean('status');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateCouponsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('products_pictures');
     }
 }

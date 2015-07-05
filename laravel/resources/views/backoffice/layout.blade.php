@@ -35,7 +35,7 @@
                 <li><a href="#contact">Contact</a></li>
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
+              <!--<ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Link</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -47,7 +47,7 @@
                       <li><a href="#">Separated link</a></li>
                     </ul>
                   </li>
-                </ul>
+                </ul>-->
 
             </div><!--/.nav-collapse -->
           </div>
@@ -58,9 +58,10 @@
         <div class="col-md-3">
 
         <div class="list-group">
-            <a class="list-group-item active" href="/backoffice/products">Products</a>
+            <a class="list-group-item" href="/backoffice/products">Products</a>
             <a class="list-group-item" href="/backoffice/categories">Categories</a>
             <a class="list-group-item" href="/backoffice/inventory">Inventory</a>
+            <a class="list-group-item" href="/backoffice/coupons">Coupons</a>
           </div>
 
         </div>

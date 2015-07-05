@@ -34,6 +34,7 @@ Route::group(['prefix' => 'backoffice'],function(){
     Route::get('products', ['uses' => 'BackOffice\ProductController@index', 'as' => 'backoffice.products']);
     Route::get('categories', ['uses' => 'BackOffice\CategoryController@index', 'as' => 'backoffice.categories']);
     Route::get('inventory', ['uses' => 'BackOffice\InventoryController@index', 'as' => 'backoffice.inventory']);
+    Route::get('coupons', ['uses' => 'BackOffice\CouponController@index', 'as' => 'backoffice.coupons']);
 
 });
 
