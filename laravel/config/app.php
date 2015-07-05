@@ -143,7 +143,8 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        App\Checkout\CheckoutServiceProvider::class
     ],
 
     /*
@@ -192,6 +193,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Cart'      => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Checkout'  => App\Checkout\Facades\Checkout::class,
     ],
 
 ];

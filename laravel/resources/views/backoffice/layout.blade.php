@@ -62,6 +62,7 @@
             <a class="list-group-item" href="/backoffice/categories">Categories</a>
             <a class="list-group-item" href="/backoffice/inventory">Inventory</a>
             <a class="list-group-item" href="/backoffice/coupons">Coupons</a>
+            <a class="list-group-item" href="/backoffice/orders">Orders</a>
           </div>
 
         </div>

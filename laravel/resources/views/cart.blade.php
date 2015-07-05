@@ -13,29 +13,7 @@
 
 <div class="container">
 	<div class="check">
-		<div class="col-md-3 cart-total">
-			 <div class="price-details">
-				 <h3>Price Details</h3>
-				 <span>Total</span>
-				 <span class="total1">{{ $total }} &euro;</span>
-				 <span>Discount</span>
-				 <span class="total1">---</span>
-				 <div class="clearfix"></div>
-			 </div>
-			 <ul class="total_price">
-			   <li class="last_price"> <h4>TOTAL</h4></li>
-			   <li class="last_price"><span>{{ $total }} &euro;</span></li>
-			   <div class="clearfix"> </div>
-			 </ul>
 
-			 <div class="clearfix"></div>
-			 <a class="order" href="#">Place Order</a>
-			 <div class="total-item">
-				 <h3>OPTIONS</h3>
-				 <h4>COUPONS</h4>
-				 <a class="cpns" href="#">Apply Coupons</a>
-			 </div>
-		</div>
 		<div class="col-md-9 cart-items">
 			 <h1>My Shopping Bag ({{count($products)}})</h1>
 			 @foreach($products as $product)
@@ -63,6 +41,31 @@
 			 </div>
 			 @endforeach
 		</div>
+
+		<div class="col-md-3 cart-total">
+             <div class="price-details">
+                 <h3>Price Details</h3>
+                 <span>Total</span>
+                 <span class="total1">{{ $total }} &euro;</span>
+                 <span>Discount</span>
+                 <span class="total1">---</span>
+                 <div class="clearfix"></div>
+             </div>
+             <ul class="total_price">
+               <li class="last_price"> <h4>TOTAL</h4></li>
+               <li class="last_price"><span>{{ $total }} &euro;</span></li>
+               <div class="clearfix"> </div>
+             </ul>
+
+             <div class="clearfix"></div>
+             <a class="order" href="{{ route('checkout.index') }}">Place Order</a>
+             <div class="total-item">
+                 <h3>OPTIONS</h3>
+                 <h4>COUPONS</h4>
+                 <a class="cpns" href="#">Apply Coupons</a>
+             </div>
+        </div>
+
 		<div class="clearfix"> </div>
 	 </div>
 </div>

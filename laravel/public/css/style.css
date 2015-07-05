@@ -99,9 +99,7 @@ body a{
 	float:left;
 	 
 }
-.check{
-	padding:5em 0;
-}
+
 .cart-item-info h3{
 	font-size:1em;
 	font-weight:600;
@@ -157,10 +155,10 @@ body a{
 .cart-header2 {  
   position: relative;  
 }
-a.order {
+a.order, input[type="submit"].order {
   background:#00405d;
   padding: 10px 20px;
-  
+  border-width: 0;
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -169,7 +167,7 @@ a.order {
   text-align: center;
   margin:3em 0;
 }
-a.order:hover{
+a.order:hover,input[type="submit"].order:hover{
 	background:#615c85;
 }
 .total-item,.cart-items{
@@ -3256,9 +3254,7 @@ ul.grid_2 li {
 .footer p{
 margin:1em 0 0;
 }
-.check {
-  padding: 2em 0;
-}
+
 .box_1 p {
   margin: 0em 0.3em 0;
 }

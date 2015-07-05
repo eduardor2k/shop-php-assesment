@@ -88,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"> </div>
                 </div>
                 <div class="create_btn">
-                    <a href="{{ route('cart.index') }}">CHECKOUT</a>
+                    <a href="{{ route('cart.index') }}">View Cart</a>
                 </div>
                 <div class="clearfix"> </div>
             </div>

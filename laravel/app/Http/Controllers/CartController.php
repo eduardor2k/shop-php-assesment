@@ -23,7 +23,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('checkout', [
+        return view('cart', [
             'products' => Cart::content(),
             'total' => Cart::total(),
         ]);
