@@ -12,9 +12,9 @@ use Validator;
 use App\Models\Order;
 
 /**
- * Class CartController
+ * Class CheckoutController
  *
- * This controler manages all the cart operations
+ * This controller manages the checkout process
  *
  * @package App\Http\Controllers
  */
@@ -44,7 +44,6 @@ class CheckoutController extends Controller
 
             // If everything is ok
             if (count($validator->errors()->all()) == 0) {
-
 
                 Order::addOrder($post,Cart::total(),Cart::content());
                 Cart::destroy();
