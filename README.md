@@ -17,9 +17,12 @@ Good Luck
 You can see a demo in the following adress: http://shop.alonsoalbella.com
 You can access the admin area in the following adress: http://shop.alonsoalbella.com/backoffice
 
+v1.3 (Next release)
+- Auth
+- API Rest
+
 v1.2 (Next release)
 - Full CheckOut Process
-- API Rest
 
 v1.1
 - Add coupons discount

@@ -26,5 +26,5 @@
         </tbody>
     </table>
 
-    <button class="btn btn-default" type="button">Add Category</button>
+    <button class="btn btn-default" type="button">Add Item</button>
 @endsection

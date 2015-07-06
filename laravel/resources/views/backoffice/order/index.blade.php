@@ -1,7 +1,7 @@
 @extends('backoffice.layout')
 
 @section('content')
-    <h1>Welcome to the Inventory.</h1>
+    <h1>Welcome to Orders.</h1>
 
     <table class="table">
         <thead>
