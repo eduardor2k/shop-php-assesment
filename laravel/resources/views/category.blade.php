@@ -28,8 +28,8 @@
                     <div class="content_box"><a href="{{ route('product', ['category' => $category->code, 'product' => str_slug($product->name),'product_id' => $product->id ]) }}">
                          <img src="/images/products/{{$product->pictures[0]->path}}" class="img-responsive" alt=""/>
                           </a>
-                        <h4><a href="{{ route('product', ['category' => $category->code, 'product' => str_slug($product->name),'product_id' => $product->id ]) }}">{{ $product->name }}</a></h4>
-                         <p>{{ $product->short_description }}</p>
+                        <h4><a href="{{ route('product', ['category' => $category->code, 'product' => str_slug($product->name),'product_id' => $product->id ]) }}">{{ e($product->name) }}</a></h4>
+                         <p>{{ e($product->short_description) }}</p>
                          <div class="grid_1 simpleCart_shelfItem">
 
                          <div class="item_add"><span class="item_price"><h6>ONLY {{ $product->price }}&euro;</h6></span></div>

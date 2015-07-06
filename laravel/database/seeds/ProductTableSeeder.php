@@ -17,7 +17,7 @@ class ProductTableSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => 'Grey Suit',
-                'price' => rand(0,100),
+                'price' => rand(30,100),
                 'short_description' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris ac nisi hendrerit aliquet. Morbi vitae turpis vitae',
                 'created_at' => new DateTime,

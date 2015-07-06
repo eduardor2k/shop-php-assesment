@@ -11,18 +11,18 @@
                     <div class="grid images_3_of_2">
                         <ul id="etalage">
                             @foreach($product->pictures as $picture)
-                            <li><img src="/images/products/{{$picture->path}}" class="img-responsive " alt=""/></li>
+                            <li><img src="/images/products/{{ e($picture->path) }}" class="img-responsive " alt=""/></li>
                             @endforeach
                         </ul>
                          <div class="clearfix"></div>
                   </div>
                   <div class="desc1 span_3_of_2">
-                    <h3>{{ $product->name }}</h3>
+                    <h3>{{ e($product->name) }}</h3>
                     <br />
-                    <p>{{ $product->short_description }}</p>
+                    <p>{{ e($product->short_description) }}</p>
                     <div class="price">
                         <span class="text">Price:</span>
-                        <span class="price-new">{{ $product->price }}&euro;</span>
+                        <span class="price-new">{{ e($product->price) }}&euro;</span>
                     </div>
 
                     <div class="btn_form">
@@ -34,7 +34,7 @@
                </div>
                 <div class="single-bottom1">
                     <h6>Details</h6>
-                    <p class="prod-desc">{{ $product->description }}</p>
+                    <p class="prod-desc">{{ e($product->description) }}</p>
                 </div>
            </div>
            <div class="clearfix"></div>

@@ -24,8 +24,8 @@
                          <img src="/images/products/{{$product->product->pictures[0]->path}}" class="img-responsive" alt=""/>
                     </div>
 			        <div class="cart-item-info">
-					    <h3><a href="{{ route('product', ['category' => $product->product->categories[0]->code, 'product' => str_slug($product->product->name) ]) }}">{{$product->id}}# {{$product->name}}</a></h3>
-						<p>{{ $product->product->short_description }}</p>
+					    <h3><a href="{{ route('product', ['category' => $product->product->categories[0]->code, 'product' => str_slug($product->product->name) ]) }}">{{$product->id}}# {{e($product->name)}}</a></h3>
+						<p>{{ e($product->product->short_description) }}</p>
 						<ul class="qty">
 							<li><p>Quantity :
 							    <select class="updateQuantity" rowid="{{ $product->rowid }}">
