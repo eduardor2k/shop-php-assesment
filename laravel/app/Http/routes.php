@@ -32,13 +32,11 @@ Route::group(['prefix' => 'checkout'],function() {
     Route::match(['get', 'post'],'order', ['uses' => 'CheckoutController@order', 'as' => 'checkout.order']);
 });
 
+// Coupon group routes
 Route::group(['prefix' => 'coupon'],function() {
-
-    Route::get('/', ['uses' => 'CouponController@index', 'as' => 'coupon.index']);
-    Route::get('add/{product_id}', ['uses' => 'CouponController@add', 'as' => 'coupon.add']);
-    Route::get('remove/{product_id}', ['uses' => 'CouponController@remove', 'as' => 'coupon.remove']);
+    Route::match(['get', 'post'],'add/{coupon_name?}', ['uses' => 'CouponController@add', 'as' => 'coupon.add']);
+    Route::get('remove/{coupon_name}', ['uses' => 'CouponController@remove', 'as' => 'coupon.remove']);
     Route::get('clear', ['uses' => 'CouponController@clear', 'as' => 'coupon.clear']);
-
 });
 
 Route::group(['prefix' => 'backoffice'],function(){

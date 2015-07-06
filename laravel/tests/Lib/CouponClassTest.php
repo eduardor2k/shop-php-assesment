@@ -7,7 +7,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
  *
  * Class CouponTest
  */
-class CouponTest extends TestCase
+class CouponClassTest extends TestCase
 {
     /**
      * Add item to cart
@@ -57,5 +57,18 @@ class CouponTest extends TestCase
         Cart::clearCoupons();
 
         $this->assertEquals(0,count(Cart::coupons()->all()));
+    }
+
+    /**
+     * Returns the biggest discount
+     */
+    public function testDiscount()
+    {
+        Cart::add(1, 'ITEM1', 1, '100');
+        Cart::addCoupon('TEST20',10);
+        Cart::addCoupon('TEST10',20);
+        Cart::addCoupon('TEST50',50);
+        Cart::addCoupon('TEST40',30);
+        $this->assertEquals(50,Cart::discount());
     }
 }

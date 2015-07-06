@@ -84,6 +84,30 @@ class Cart extends OldCart
     }
 
     /**
+     * Returns the discounted value
+     */
+    public function discount()
+    {
+        $discount = 0;
+        foreach($this->coupons()->toArray() as $item)
+        {
+            if($item['discount'] > $discount)
+            {
+                $discount = $item['discount'];
+            }
+        }
+        return $this->total()*$discount/100;
+    }
+
+    /**
+     * Returns the discounted value
+     */
+    public function totalWithDiscount()
+    {
+        return $this->total() - $this->discount();
+    }
+
+    /**
      * Returns the instance for the coupons
      *
      * @return string

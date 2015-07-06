@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
 use App\Http\Requests;
@@ -25,7 +23,10 @@ class CartController extends Controller
     {
         return view('cart', [
             'products' => Cart::content(),
+            'discount' => Cart::discount(),
+            'coupons' => Cart::coupons()->toArray(),
             'total' => Cart::total(),
+            'total_with_discount' => Cart::totalWithDiscount(),
         ]);
     }
 

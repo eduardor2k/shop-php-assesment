@@ -8,6 +8,13 @@
             var items = $('option:selected',this).val();
             window.location = '/cart/update/'+rowid+'/'+items;
         });
+
+        $('#coupon_form input[type="button"]').click(function(){
+            var url = $('#coupon_form').attr('action');
+            var value = $('#coupon_form input[type="text"]').val();
+            window.location = url+value;
+            console.log(url+value);
+        });
     });
 </script>
 
@@ -29,7 +36,7 @@
 						<ul class="qty">
 							<li><p>Quantity :
 							    <select class="updateQuantity" rowid="{{ $product->rowid }}">
-							        @for($i = 0; $i < 20; $i++)
+							        @for($i = 0; $i < 21; $i++)
                                         <option value="{{$i}}" @if($product->qty == $i)selected="selected"@endif>{{$i}}</option>
 							        @endfor
 							    </select></p></li>
@@ -48,21 +55,31 @@
                  <span>Total</span>
                  <span class="total1">{{ $total }} &euro;</span>
                  <span>Discount</span>
-                 <span class="total1">---</span>
+                 <span class="total1">@if($discount == 0)--- @else {{$discount}} &euro; @endif</span>
                  <div class="clearfix"></div>
              </div>
              <ul class="total_price">
                <li class="last_price"> <h4>TOTAL</h4></li>
-               <li class="last_price"><span>{{ $total }} &euro;</span></li>
+               <li class="last_price"><span>{{ $total_with_discount }} &euro;</span></li>
                <div class="clearfix"> </div>
              </ul>
 
              <div class="clearfix"></div>
              <a class="order" href="{{ route('checkout.index') }}">Place Order</a>
              <div class="total-item">
-                 <h3>OPTIONS</h3>
-                 <h4>COUPONS</h4>
-                 <a class="cpns" href="#">Apply Coupons</a>
+                 <h3>Coupons</h3>
+                 <div class="price-details">
+                 @foreach($coupons as $coupon)
+                    <span class="total1">{{e(strtoupper($coupon['name']))}} {{$coupon['discount']}}%:</span><span class="total1"><a href="{{route('coupon.remove',['coupon_code' => $coupon['name']])}}">Remove Coupon</a></span>
+                 @endforeach
+                 @if (count($coupons) > 0) <span class="total1" style="width: 100%">Only the coupon with the higher discount will be used</span>@endif
+                 </div>
+                 <div class="clearfix"> </div>
+                 <br />
+                 <form method="post" id="coupon_form" action="/coupon/add/">
+                     <input type="text" name="coupon_code" placeholder="TEST10" style="width: 40%" />
+                     <input type="button" class="cpns" value="Apply Coupons" />
+                 </form>
              </div>
         </div>
 

@@ -15,7 +15,7 @@ class CouponTableSeeder extends Seeder
 
         $products = [
             [
-                'code' => 'TEST20',
+                'code' => 'test20',
                 'discount' => 20,
                 'enable' => 0,
                 'expire' => 0,
@@ -24,7 +24,7 @@ class CouponTableSeeder extends Seeder
                 'updated_at' => new DateTime
             ],
             [
-                'code' => 'TEST10',
+                'code' => 'test10',
                 'discount' => 10,
                 'enable' => 0,
                 'expire' => 0,
