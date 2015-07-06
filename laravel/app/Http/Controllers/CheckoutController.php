@@ -43,6 +43,7 @@ class CheckoutController extends Controller
             if (count($validator->errors()->all()) == 0) {
 
                 Order::addOrder($post,Cart::total(),Cart::discount(),Cart::content());
+                Cart::clearCoupons();
                 Cart::destroy();
                 return redirect()->route('checkout.order');
             }
