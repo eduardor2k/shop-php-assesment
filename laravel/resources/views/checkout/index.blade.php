@@ -65,12 +65,12 @@
 
                  <div class="clearfix"></div>
                  <span>Discount</span>
-                 <span class="total1">---</span>
+                 <span class="total1">@if($discount == 0)--- @else {{$discount}} &euro; @endif</span>
                  <div class="clearfix"></div>
              </div>
              <ul class="total_price">
                <li class="last_price"> <h4>TOTAL</h4></li>
-               <li class="last_price"><span>{{ $total }} &euro;</span></li>
+               <li class="last_price"><span>{{ $total_with_discount }} &euro;</span></li>
                <div class="clearfix"> </div>
              </ul>
              <input type="submit" class="order" value="Next" style="width: 100%;" />

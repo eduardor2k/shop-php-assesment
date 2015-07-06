@@ -18,7 +18,7 @@ class Order extends Model
      * @param integer $total
      * @return integer
      */
-    public static function addOrder($data,$total,$products)
+    public static function addOrder($data,$total,$discount,$products)
     {
         $order = new self();
         $order->first_name = $data['first_name'];
@@ -30,6 +30,7 @@ class Order extends Model
         $order->country = $data['country'];
         $order->zipcode = $data['zipcode'];
         $order->amount = $total;
+        $order->discount = $discount;
         $order->save();
 
         foreach($products as $product)

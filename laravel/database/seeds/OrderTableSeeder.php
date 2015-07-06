@@ -25,6 +25,7 @@ class OrderTableSeeder extends Seeder
                 'country' => 'United States of America',
                 'zipcode' => '56300',
                 'amount' => 50.00,
+                'discount' => 10.00,
                 'status' => 0,
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime

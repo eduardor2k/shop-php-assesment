@@ -42,7 +42,7 @@ class CheckoutController extends Controller
             // If everything is ok
             if (count($validator->errors()->all()) == 0) {
 
-                Order::addOrder($post,Cart::total(),Cart::content());
+                Order::addOrder($post,Cart::total(),Cart::discount(),Cart::content());
                 Cart::destroy();
                 return redirect()->route('checkout.order');
             }
@@ -53,6 +53,8 @@ class CheckoutController extends Controller
         return view('checkout.index', [
             'products' => Cart::content(),
             'total' => Cart::total(),
+            'discount' => Cart::discount(),
+            'total_with_discount' => Cart::totalWithDiscount(),
             'post' => $post,
             'errors' => $errors,
         ]);

@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('country');
             $table->string('zipcode');
             $table->float('amount');
+            $table->float('discount');
             $table->integer('status');
             $table->timestamps();
         });
