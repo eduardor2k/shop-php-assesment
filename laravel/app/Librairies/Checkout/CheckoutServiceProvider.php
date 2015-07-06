@@ -1,4 +1,4 @@
-<?php namespace App\Checkout;
+<?php namespace App\Librairies\Checkout;
 
 use Illuminate\Support\ServiceProvider;
 

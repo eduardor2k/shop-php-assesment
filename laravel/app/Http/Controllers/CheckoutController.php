@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Response;
 use App\Http\Requests;
 use Gloudemans\Shoppingcart\Facades\Cart;
-use App\Checkout\Facades\Checkout;
+use App\Librairies\Checkout\Facades\Checkout;
 //use Illuminate\Http\Request;
 use Illuminate\Http\Request;
 use Validator;

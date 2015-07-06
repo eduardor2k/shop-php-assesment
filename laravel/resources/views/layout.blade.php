@@ -98,6 +98,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <input type="submit" value="">
                 </form>
             </div>
+
+            {{Cart::coupons()}}
+
             <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>

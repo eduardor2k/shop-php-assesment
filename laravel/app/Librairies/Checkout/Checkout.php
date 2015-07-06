@@ -1,5 +1,5 @@
 <?php
-namespace App\Checkout;
+namespace App\Librairies\Checkout;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 

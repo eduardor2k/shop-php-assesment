@@ -143,8 +143,8 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
-        App\Checkout\CheckoutServiceProvider::class
+        App\Librairies\Shoppingcart\ShoppingcartServiceProvider::class,
+        App\Librairies\Checkout\CheckoutServiceProvider::class
     ],
 
     /*
@@ -192,8 +192,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Cart'      => Gloudemans\Shoppingcart\Facades\Cart::class,
-        'Checkout'  => App\Checkout\Facades\Checkout::class,
+        'Cart'      => App\Librairies\Shoppingcart\Facades\Cart::class,
+        'Checkout'  => App\Librairies\Checkout\Facades\Checkout::class,
     ],
 
 ];

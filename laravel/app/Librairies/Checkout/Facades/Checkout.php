@@ -1,5 +1,5 @@
 <?php
-namespace App\Checkout\Facades;
+namespace App\Librairies\Checkout\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

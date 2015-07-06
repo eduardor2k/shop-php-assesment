@@ -1,5 +1,5 @@
 <?php
-namespace App\Checkout\Exception;
+namespace App\Librairies\Checkout\Exception;
 
 class CheckoutInstanceException extends \Exception
 {
