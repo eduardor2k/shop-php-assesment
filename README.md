@@ -18,6 +18,7 @@ You can see a demo in the following adress: http://shop.alonsoalbella.com
 
 v1.1 (Next release)
 - Add coupons discount
+- Full CheckOut Process
 - API Rest
 
 v1.0
