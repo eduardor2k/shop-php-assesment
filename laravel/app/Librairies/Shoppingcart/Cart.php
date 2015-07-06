@@ -38,11 +38,11 @@ class Cart extends OldCart
     }
 
     /**
-     * Adds a coupon
+     * Removes a coupon
      *
      * @param string $name
-     * @param float $discount
      * @return CouponCollection
+     * @throws Exceptions\CouponNotFoundException
      */
     public function removeCoupon($name)
     {
@@ -60,6 +60,17 @@ class Cart extends OldCart
         $this->session->put($this->getCouponInstance(),$coupons);
 
         return $coupons;
+    }
+
+    /**
+     * Removes all the coupons
+     *
+     * @return CouponCollection
+     */
+    public function clearCoupons()
+    {
+        $this->session->put($this->getCouponInstance(),new CouponCollection());
+        return $this->coupons();
     }
 
     /**

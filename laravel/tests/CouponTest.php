@@ -2,6 +2,11 @@
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 
+/**
+ * This class extends the cart class
+ *
+ * Class CouponTest
+ */
 class CouponTest extends TestCase
 {
     /**
@@ -35,5 +40,22 @@ class CouponTest extends TestCase
         $this->assertEquals(0,count(Cart::coupons()->all()));
 
         Cart::removeCoupon('UNKNOWN_COUPON');
+    }
+
+    /**
+     * Removes all the coupons from the cart
+     */
+    public function testClearItems()
+    {
+        Cart::addCoupon('TEST20',5.5);
+        Cart::addCoupon('TEST10',5.5);
+        Cart::addCoupon('TEST40',5.5);
+        Cart::addCoupon('TEST50',7.5);
+
+        $this->assertEquals(4,count(Cart::coupons()->all()));
+
+        Cart::clearCoupons();
+
+        $this->assertEquals(0,count(Cart::coupons()->all()));
     }
 }
