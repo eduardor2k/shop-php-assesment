@@ -15,3 +15,11 @@ An extra comment out of me as a recruiter: I Know that our Team Lead wants good 
 Good Luck
 
 You can see a demo in the following adress: http://shop.alonsoalbella.com
+
+v1.1 (Next release)
+- Add coupons discount
+- API Rest
+
+v1.0
+- Cart Ready
+- Change Quantity of products
