@@ -29,6 +29,6 @@
         @endforeach
         </tbody>
     </table>
-
+{{$products->render()}}
     <button class="btn btn-default" type="button">Add Product</button>
 @endsection
